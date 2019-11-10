@@ -36,7 +36,7 @@ public class ItemGenerator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        for (int m = 0; m < 5; m++)
+        for (int m = 0; m < 6; m++)
         {
 
 
@@ -49,7 +49,7 @@ public class ItemGenerator : MonoBehaviour {
 
                 count += 1;
 
-                nextPos += 60;
+                nextPos += 40;
             }
 
 
@@ -59,7 +59,7 @@ public class ItemGenerator : MonoBehaviour {
 
     void randomitem()
     {
-        for (float i = unitychan.transform.position.z + 20; i < unitychan.transform.position.z + 70; i += 10)
+        for (float i = unitychan.transform.position.z + 50; i < unitychan.transform.position.z + 90; i += 10)
         {
 
             int num = Random.Range(1, 11);
@@ -75,7 +75,7 @@ public class ItemGenerator : MonoBehaviour {
             else
             {
 
-                for (int j = -1; j <= 1; j++)
+                for (int j = -2; j <= 2; j++)
                 {
                     int item = Random.Range(1, 11);
 
