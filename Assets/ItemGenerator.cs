@@ -75,11 +75,11 @@ public class ItemGenerator : MonoBehaviour {
             else
             {
 
-                for (int j = -2; j <= 2; j++)
+                for (int j = -1; j <= 1; j++)
                 {
                     int item = Random.Range(1, 11);
 
-                    int offsetZ = Random.Range(-5, 6);
+                    int offsetZ = Random.Range(0, 20);
 
                     if (1 <= item && item <= 6)
                     {
@@ -87,13 +87,57 @@ public class ItemGenerator : MonoBehaviour {
 
                         coin.transform.position = new Vector3(posRange = j, coin.transform.position.y, i + offsetZ);
                     }
-                    else if (7 <= item && item <= 9)
+                    else if (8<= item && item <= 9)
                     {
                         GameObject car = Instantiate(carPrefab) as GameObject;
 
                         car.transform.position = new Vector3(posRange * j, car.transform.position.y, i + offsetZ);
                     }
                 }
+
+
+
+                for (int j = 1; j <= 3; j++)
+                {
+                    int item = Random.Range(1, 11);
+
+                    int offsetZ = Random.Range(0, 20);
+
+                    if (1 <= item && item <= 6)
+                    {
+                        GameObject coin = Instantiate(coinPrefab) as GameObject;
+
+                        coin.transform.position = new Vector3(posRange = j, coin.transform.position.y, i + offsetZ);
+                    }
+                    else if ( 10 <= item)
+                    {
+                        GameObject car = Instantiate(carPrefab) as GameObject;
+
+                        car.transform.position = new Vector3( j, car.transform.position.y, i + offsetZ);
+                    }
+                }
+
+
+                for (int j = -3; j <= -1; j++)
+                {
+                    int item = Random.Range(1, 11);
+
+                    int offsetZ = Random.Range(0, 20);
+
+                    if (1 <= item && item <= 6)
+                    {
+                        GameObject coin = Instantiate(coinPrefab) as GameObject;
+
+                        coin.transform.position = new Vector3(posRange = j, coin.transform.position.y, i + offsetZ);
+                    }
+                    else if (item ==8 || item == 10)
+                    {
+                        GameObject car = Instantiate(carPrefab) as GameObject;
+
+                        car.transform.position = new Vector3( j, car.transform.position.y, i + offsetZ );
+                    }
+                }
+
 
             }
 
